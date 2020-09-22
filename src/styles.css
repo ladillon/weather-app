@@ -1,0 +1,67 @@
+body {
+  padding: 10px;
+  line-height: 48px;
+  font-family: "Oswald", sans-serif;
+  color: #204051;
+  margin: 20px auto;
+}
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  font-size: 48px;
+  color: #b13753;
+  font-weight: bold;
+}
+i {
+  padding: 10px;
+  display: block;
+  font-size: 48px;
+  color: #337b9c;
+}
+
+.weatherapp {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #8cb5f2 100%);
+  margin: 0px auto;
+  border-radius: 25px;
+  border: solid 1px #5e41a7;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.currenttemp {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.current-date {
+  font-size: 22px;
+  text-align: center;
+}
+.current-time {
+  text-align: center;
+}
+.currenthighlow {
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.card {
+  background: #ffffff 0%;
+  border-radius: 15px;
+  border: solid 1px #3b697885;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.condition {
+  text-transform: capitalize;
+}
+.img-fluid {
+  max-width: 175px;
+  display: block;
+  margin: 10px auto;
+}
+.btn.btn-success {
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.btn.btn-primary {
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
