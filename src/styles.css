@@ -1,9 +1,9 @@
 body {
-  padding: 10px;
-  line-height: 48px;
+  padding: 15px;
+  line-height: 38px;
   font-family: "Oswald", sans-serif;
   color: #204051;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 h1 {
   font-family: "Bebas Neue", cursive;
@@ -15,8 +15,11 @@ h1 {
 i {
   padding: 10px;
   display: block;
-  font-size: 48px;
+  font-size: 46px;
   color: #337b9c;
+}
+footer {
+  text-align: center;
 }
 
 .weatherapp {
@@ -25,7 +28,7 @@ i {
   border-radius: 25px;
   border: solid 1px #5e41a7;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   max-width: 800px;
 }
 
@@ -49,15 +52,15 @@ i {
   background: #ffffff 0%;
   border-radius: 15px;
   border: solid 1px #3b697885;
-  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  box-shadow: rgba(37, 39, 89, 0.164) 0px 8px 8px 0;
 }
 .condition {
   text-transform: capitalize;
 }
 .img-fluid {
-  max-width: 175px;
+  max-width: 150px;
   display: block;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 .btn.btn-success {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
