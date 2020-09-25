@@ -1,137 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap" rel="stylesheet" />
-    <title>Weather App</title>
-</head>
-
-<body>
-    <div class="container">
-        <div class="weatherapp">
-            <div class="row align-items-center">
-                <div class="col-5">
-                    <img src="images/weather.svg" id="trees" class="img-fluid" alt="Responsive image" />
-                </div>
-                <div class="col-6">
-                    <form class="search-form" id="search-form">
-                        <div class="input-group" id="form-group">
-                            <input type="text" placeholder="Enter City" class="form-control input" id="inputCity"
-                                autofocus autocomplete="off" />
-                            <input type="submit" id="submit" class="btn btn-success" value="Submit" />
-                            <button type="button" id="find-me" class="btn btn-primary">Find Me</button>
-                        </div>
-                </div>
-            </div>
-            </form>
-            <div class="row">
-                <div class="col-12">
-                    <h1 id="city">
-
-                    </h1>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="current-date">
-                                Saturday, September 12, 2020
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="current-time">
-                                01:17
-                            </div>
-                        </div>
-                    </div>
-                    <div class="currenttemp">
-                        <div class="row">
-                            <div class="col-12">
-                                <img src="#" alt="" id="icon" class="icon">
-                                <span class="condition" id="condition">
-                                </span>
-                                <span class="temp" id="converttemp"></span>°F
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="currenthighlow">
-                <div class="row justify-content-around">
-                    <div class="col-6">
-                        High
-                        <span class="high" id="high">100</span>°F
-                    </div>
-                    <div class="col-6">
-                        Low <span class="low" id="low">69</span>°F
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card body">
-                            <i class="fas fa-sun"></i>Thursday
-                            <br />
-                            High 99°F <br />
-                            Low 70°F
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card body">
-                            <i class="fas fa-cloud-sun"></i>
-                            Friday
-                            <br />
-                            High 99°F
-                            <br />
-                            Low 70°F
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card body">
-                            <i class="fas fa-cloud-sun-rain"></i>
-                            Saturday
-                            <br />
-                            High 99°F
-                            <br />
-                            Low 70°F
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card body">
-                            <i class="fas fa-cloud-showers-heavy"></i>
-                            Sunday
-                            <br />
-                            High 99°F
-                            <br />
-                            Low 70°F
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-   
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://kit.fontawesome.com/da811d7794.js" crossorigin="anonymous"></script>
-    <script src="src/index.js" />
-    </script>
-    <footer>
-    <a href="https://github.com/ladillon/weather-app" target="_blank">Open-Source Code</a> by Lindsey Dillon
-    </footer>
-</body>
 
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weatherapp">
+        <div class="row align-items-center">
+          <div class="col-5">
+            <img
+              src="images/weather.svg"
+              id="trees"
+              class="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
+          <div class="col-6">
+            <form class="search-form" id="search-form">
+              <div class="input-group" id="form-group">
+                <input
+                  type="text"
+                  placeholder="Enter City"
+                  class="form-control input"
+                  id="inputCity"
+                  autofocus
+                  autocomplete="off"
+                />
+                <input
+                  type="submit"
+                  id="submit"
+                  class="btn btn-success"
+                  value="Submit"
+                />
+                <button type="button" id="find-me" class="btn btn-primary">
+                  Find Me
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h1 id="city"></h1>
+            <div class="row">
+              <div class="col-12">
+                <div class="current-date">Saturday, September 12, 2020</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="current-time">01:17</div>
+              </div>
+            </div>
+            <div class="currenttemp">
+              <div class="row">
+                <div class="col-12">
+                  <img src="#" alt="" id="icon" class="icon" />
+                  <span class="condition" id="condition"> </span>
+                  <span class="temp" id="converttemp"></span>°F
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="currenthighlow">
+          <div class="row justify-content-around">
+            <div class="col-6">
+              High
+              <span class="high" id="high">100</span>°F
+            </div>
+            <div class="col-6">Low <span class="low" id="low">69</span>°F</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="card">
+              <div class="card body">
+                <i class="fas fa-sun"></i>Thursday
+                <br />
+                High 99°F <br />
+                Low 70°F
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card body">
+                <i class="fas fa-cloud-sun"></i>
+                Friday
+                <br />
+                High 99°F
+                <br />
+                Low 70°F
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card body">
+                <i class="fas fa-cloud-sun-rain"></i>
+                Saturday
+                <br />
+                High 99°F
+                <br />
+                Low 70°F
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card body">
+                <i class="fas fa-cloud-showers-heavy"></i>
+                Sunday
+                <br />
+                High 99°F
+                <br />
+                Low 70°F
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/da811d7794.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js"></script>
+    <footer>
+      <a href="https://github.com/ladillon/weather-app" target="_blank"
+        >Open-Source Code</a
+      >
+      by Lindsey Dillon
+    </footer>
+  </body>
 </html>
