@@ -42,9 +42,10 @@ function getTime(date) {
 time.innerHTML = getTime(date);
 function showTemperature(response) {
   console.log(response);
+  fahrenheitTemperature = response.data.main.temp;
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#converttemp").innerHTML = Math.round(
-    response.data.main.temp
+    fahrenheitTemperature
   );
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].description;
@@ -84,23 +85,30 @@ function handleSubmit(event) {
 function getLocation(event) {
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-getCity("Austin");
+
+function convertTempc(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusTemperature = (fahrenheitTemperature - 32) / 1.8;
+  let temperatureElement = document.querySelector("#converttemp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+function convertTempF(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  document.querySelector("#converttemp").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+
+let fahrenheitTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit");
+let celsiusLink = document.querySelector("#celsius");
+
 document.querySelector("#search-form").addEventListener("submit", handleSubmit);
 document.querySelector("#find-me").addEventListener("click", getLocation);
-
-//function getFtemp(event) {
-//event.preventDefault();
-//let converttemp = document.querySelector("#converttemp");
-//converttemp.innerHTML = "82";
-//}
-//let fahrenheit = document.querySelector("#in-fahren");
-//fahrenheit.addEventListener("click", getFtemp);
-//function getCTemp(event) {
-//event.preventDefault();
-//console.log("#convertTemp");
-//let temperature = document.querySelector("#converttemp");
-//let convertTemp = (Math.round(temperature - 32) * 5) / 9;
-//temperature.innerHTML = convertTemp;
-//}
-//let celsius = document.querySelector("#in-celc");
-//celsius.addEventListener("click", getCTemp);
+celsiusLink.addEventListener("click", convertTempc);
+fahrenheitLink.addEventListener("click", convertTempF);
+getCity("Austin");

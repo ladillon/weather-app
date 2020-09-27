@@ -31,11 +31,18 @@ footer {
   padding: 10px;
   max-width: 800px;
 }
-
+.temp {
+  padding-left: 10px;
+}
 .currenttemp {
   font-size: 36px;
   font-weight: bold;
   padding-bottom: 15px;
+}
+.degrees {
+  font-size: 20px;
+  padding-left: 5px;
+  vertical-align: text-top;
 }
 .current-date {
   font-size: 22px;
@@ -67,4 +74,12 @@ footer {
 }
 .btn.btn-primary {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+.currenttemp .active {
+  color: #204051;
+}
+.currenttemp .active:hover {
+  text-decoration: none;
+  cursor: default;
 }
