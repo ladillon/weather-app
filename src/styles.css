@@ -29,7 +29,7 @@ footer {
   border: solid 1px #5e41a7;
   text-align: center;
   padding: 10px;
-  max-width: 800px;
+  max-width: 950px;
 }
 .temp {
   padding-left: 10px;
@@ -60,7 +60,9 @@ footer {
   border-radius: 15px;
   border: solid 1px #3b697885;
   box-shadow: rgba(37, 39, 89, 0.164) 0px 8px 8px 0;
+  display: inherit;
 }
+
 .condition {
   text-transform: capitalize;
 }

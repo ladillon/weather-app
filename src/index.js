@@ -40,6 +40,78 @@ function getTime(date) {
   return `${formattedHour}:${formattedMinutes}`;
 }
 time.innerHTML = getTime(date);
+
+function showForecast(response) {
+  console.log(response);
+  let forecastDate1 = new Date(response.data.daily[1].dt * 1000).toString();
+  document.querySelector("#forecastdate1").innerHTML = forecastDate1
+    .split(" ")
+    .slice(0, 4)
+    .join(" ");
+  let forecastDate2 = new Date(response.data.daily[2].dt * 1000).toString();
+  document.querySelector("#forecastdate2").innerHTML = forecastDate2
+    .split(" ")
+    .slice(0, 4)
+    .join(" ");
+  let forecastDate3 = new Date(response.data.daily[3].dt * 1000).toString();
+  document.querySelector("#forecastdate3").innerHTML = forecastDate3
+    .split(" ")
+    .slice(0, 4)
+    .join(" ");
+  let forecastDate4 = new Date(response.data.daily[4].dt * 1000).toString();
+  document.querySelector("#forecastdate4").innerHTML = forecastDate4
+    .split(" ")
+    .slice(0, 4)
+    .join(" ");
+  document.querySelector("#forecastHigh1").innerHTML = Math.round(
+    response.data.daily[1].temp.max
+  );
+  document.querySelector("#forecastHigh2").innerHTML = Math.round(
+    response.data.daily[2].temp.max
+  );
+  document.querySelector("#forecastHigh3").innerHTML = Math.round(
+    response.data.daily[3].temp.max
+  );
+  document.querySelector("#forecastHigh4").innerHTML = Math.round(
+    response.data.daily[4].temp.max
+  );
+  document.querySelector("#forecastLow1").innerHTML = Math.round(
+    response.data.daily[1].temp.min
+  );
+  document.querySelector("#forecastLow2").innerHTML = Math.round(
+    response.data.daily[2].temp.min
+  );
+  document.querySelector("#forecastLow3").innerHTML = Math.round(
+    response.data.daily[3].temp.min
+  );
+  document.querySelector("#forecastLow4").innerHTML = Math.round(
+    response.data.daily[4].temp.min
+  );
+  document
+    .querySelector("#forecasticon1")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.daily[1].weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#forecasticon2")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.daily[2].weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#forecasticon3")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.daily[3].weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#forecasticon4")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.daily[4].weather[0].icon}@2x.png`
+    );
+}
 function showTemperature(response) {
   console.log(response);
   fahrenheitTemperature = response.data.main.temp;
@@ -60,7 +132,14 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  let lat = response.data.coord.lat;
+  let lon = response.data.coord.lon;
+  let apiKey = "fad5728d5d1f40dc0936f3c386013435";
+  let units = "imperial";
+  let forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=${units}&appid=${apiKey}`;
+  axios.get(forecastUrl).then(showForecast);
 }
+
 function getPosition(position) {
   console.log(position);
   let lat = position.coords.latitude;
@@ -68,6 +147,7 @@ function getPosition(position) {
   let apiKey = "fad5728d5d1f40dc0936f3c386013435";
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+
   console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
@@ -75,6 +155,7 @@ function getCity(city) {
   let apiKey = "fad5728d5d1f40dc0936f3c386013435";
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+
   axios.get(apiUrl).then(showTemperature);
 }
 function handleSubmit(event) {
@@ -102,7 +183,6 @@ function convertTempF(event) {
     fahrenheitTemperature
   );
 }
-
 let fahrenheitTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit");
 let celsiusLink = document.querySelector("#celsius");
