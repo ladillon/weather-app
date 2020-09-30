@@ -1,6 +1,6 @@
 body {
   padding: 15px;
-  line-height: 38px;
+  line-height: 34px;
   font-family: "Oswald", sans-serif;
   color: #204051;
   margin: 15px auto;
@@ -12,12 +12,7 @@ h1 {
   color: #b13753;
   font-weight: bold;
 }
-i {
-  padding: 10px;
-  display: block;
-  font-size: 46px;
-  color: #337b9c;
-}
+
 footer {
   text-align: center;
 }
@@ -29,18 +24,18 @@ footer {
   border: solid 1px #5e41a7;
   text-align: center;
   padding: 10px;
-  max-width: 950px;
+  max-width: 600px;
 }
 .temp {
   padding-left: 10px;
 }
 .currenttemp {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
   padding-bottom: 15px;
 }
 .degrees {
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 5px;
   vertical-align: text-top;
 }
@@ -60,16 +55,24 @@ footer {
   border-radius: 15px;
   border: solid 1px #3b697885;
   box-shadow: rgba(37, 39, 89, 0.164) 0px 8px 8px 0;
-  display: inherit;
+  max-width: 300px;
+  display: block;
+  align-self: center;
 }
 
+.card-img-top {
+  max-width: 100px;
+  align-self: center;
+}
 .condition {
   text-transform: capitalize;
 }
 .img-fluid {
-  max-width: 150px;
-  display: block;
-  margin: 5px auto;
+  max-width: 60%;
+
+  float: left;
+  padding-left: 15px;
+  display: inline-flex;
 }
 .btn.btn-success {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
@@ -77,7 +80,10 @@ footer {
 .btn.btn-primary {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
 }
-
+.icon {
+  vertical-align: middle;
+  text-align: center;
+}
 .currenttemp .active {
   color: #204051;
 }
