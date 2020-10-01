@@ -127,6 +127,12 @@ function showTemperature(response) {
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  document.querySelector("#precipitation").innerHTML = Math.round(
+    response.data.main.humidity
+  );
+  document.querySelector("#windSpeed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",

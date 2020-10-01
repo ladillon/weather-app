@@ -22,57 +22,55 @@
 
   <body>
     <div class="container">
-      <div class="weatherapp">
-        <div class="row align-items-center">
-          <div class="col-5">
-            <img src="images/weather.svg" id="trees" class="img-fluid" />
-          </div>
-          <div class="col-6">
-            <form class="search-form" id="search-form">
-              <div class="input-group" id="form-group">
-                <input
-                  type="text"
-                  placeholder="Enter City"
-                  class="form-control input"
-                  id="inputCity"
-                  autofocus
-                  autocomplete="off"
-                />
-                <input
-                  type="submit"
-                  id="submit"
-                  class="btn btn-success"
-                  value="Submit"
-                />
-                <button type="button" id="find-me" class="btn btn-primary">
-                  Find Me
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <h1 id="city">Austin</h1>
-            <div class="row">
-              <div class="col-12">
-                <div class="current-date">Saturday, September 12, 2020</div>
-              </div>
+      <div class="clearfix">
+        <div class="weatherapp">
+          <div class="row align-items-center">
+            <div class="col-5">
+              <img src="images/weather.svg" id="trees" class="img-fluid" />
             </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="current-time">01:17</div>
-              </div>
+            <div class="col-6">
+              <form class="search-form" id="search-form">
+                <div class="input-group" id="form-group">
+                  <input
+                    type="text"
+                    placeholder="Enter City"
+                    class="form-control input"
+                    id="inputCity"
+                    autofocus
+                    autocomplete="off"
+                  />
+                  <input
+                    type="submit"
+                    id="submit"
+                    class="btn btn-success"
+                    value="Submit"
+                  />
+                  <button type="button" id="find-me" class="btn btn-primary">
+                    Find Me
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="currenttemp">
-              <div class="row align-items-center">
-                <div class="col-md-12 col-lg-4 col-sm-3">
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1 id="city">Austin</h1>
+              <div class="row">
+                <div class="col-12">
+                  <div class="current-date">Saturday, September 12, 2020</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="current-time">01:17</div>
+                </div>
+              </div>
+
+              <div class="currenttemp">
+                <div class="clearfix">
                   <img src="#" alt="" id="icon" class="icon" />
-                </div>
-                <div class="col-md-12 col-lg-4 col-sm-3">
                   <span class="condition" id="condition">Clear </span>
-                </div>
-                <div class="col-md-12 col-lg-4 col-sm-3">
+
                   <span class="temp" id="converttemp"></span>
                   <span class="degrees">
                     °<a href="#" id="fahrenheit" class="active">F</a> | °<a
@@ -85,73 +83,92 @@
               </div>
             </div>
           </div>
+          <div class="weatherWrapper">
+            <div class="row justify-content-around">
+              <div class="col-6">
+                <div class="clearfix">
+                  <div class="currenthighlow">
+                    <strong> Today's High: </strong>
+                    <span class="high" id="high">100</span>°F
+                    <br />
+                    <strong> Today's Low: </strong>
+                    <span class="low" id="low">69</span>°F
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="clearfix">
+                  <span class="windHumidity">
+                    <strong> Precipitation: </strong
+                    ><span class="precipitation" id="precipitation">77</span>%
+                    <br /><strong> Wind Speed: </strong
+                    ><span class="windSpeed" id="windSpeed">2</span> mph
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-3 col-sm-3" id="forecast">
+              <div class="clearfix">
+                <div class="card">
+                  <div class="card body">
+                    <img src="" id="forecasticon1" class="card-img-top" />
+                    <p class="card-text">
+                      <span id="forecastdate1">Thursday</span><br />
+                      High: <span id="forecastHigh1">99</span>°F <br />Low:
+                      <span id="forecastLow1">70</span>°F
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-3 col-sm-3">
+              <div class="card">
+                <div class="card body">
+                  <img src="" id="forecasticon2" class="card-img-top" />
+                  <p class="card-text">
+                    <span id="forecastdate2">Friday</span><br />
+                    High <span id="forecastHigh2">99</span>°F <br />Low
+                    <span id="forecastLow2">70</span>°F
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-3 col-sm-3">
+              <div class="card">
+                <div class="card body">
+                  <img src="" id="forecasticon3" class="card-img-top" />
+                  <p class="card-text">
+                    <span id="forecastdate3"> Saturday</span><br />
+                    High <span id="forecastHigh3">99</span>°F <br />Low
+                    <span id="forecastLow3">70</span>°F
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-3 col-sm-3">
+              <div class="card">
+                <div class="card body">
+                  <img src="" id="forecasticon4" class="card-img-top" />
+                  <p class="card-text">
+                    <span id="forecastdate4">Sunday</span><br />
+                    High <span id="forecastHigh4">99</span>°F <br />Low
+                    <span id="forecastLow4">70</span>°F
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="currenthighlow">
-          <div class="row justify-content-around">
-            <div class="col-6">
-              High
-              <span class="high" id="high">100</span>°F
-            </div>
-            <div class="col-6">Low <span class="low" id="low">69</span>°F</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-3 col-sm-3" id="forecast">
-            <div class="card">
-              <div class="card body">
-                <img src="" id="forecasticon1" class="card-img-top" />
-                <p class="card-text">
-                  <span id="forecastdate1">Thursday</span><br />
-                  High: <span id="forecastHigh1">99</span>°F <br />Low:
-                  <span id="forecastLow1">70</span>°F
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-3 col-sm-3">
-            <div class="card">
-              <div class="card body">
-                <img src="" id="forecasticon2" class="card-img-top" />
-                <p class="card-text">
-                  <span id="forecastdate2">Friday</span><br />
-                  High <span id="forecastHigh2">99</span>°F <br />Low
-                  <span id="forecastLow2">70</span>°F
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-3 col-sm-3">
-            <div class="card">
-              <div class="card body">
-                <img src="" id="forecasticon3" class="card-img-top" />
-                <p class="card-text">
-                  <span id="forecastdate3"> Saturday</span><br />
-                  High <span id="forecastHigh3">99</span>°F <br />Low
-                  <span id="forecastLow3">70</span>°F
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-3 col-sm-3">
-            <div class="card">
-              <div class="card body">
-                <img src="" id="forecasticon4" class="card-img-top" />
-                <p class="card-text">
-                  <span id="forecastdate4">Sunday</span><br />
-                  High <span id="forecastHigh4">99</span>°F <br />Low
-                  <span id="forecastLow4">70</span>°F
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <footer>
+          <a href="https://github.com/ladillon/weather-app" target="_blank"
+            >Open-Source Code</a
+          >
+          by Lindsey Dillon
+        </footer>
       </div>
-      <footer>
-        <a href="https://github.com/ladillon/weather-app" target="_blank"
-          >Open-Source Code</a
-        >
-        by Lindsey Dillon
-      </footer>
     </div>
     <script
       src="https://kit.fontawesome.com/da811d7794.js"

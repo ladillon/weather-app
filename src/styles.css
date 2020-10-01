@@ -1,6 +1,6 @@
 body {
   padding: 15px;
-  line-height: 34px;
+  line-height: 32px;
   font-family: "Oswald", sans-serif;
   color: #204051;
   margin: 15px auto;
@@ -16,7 +16,6 @@ h1 {
 footer {
   text-align: center;
 }
-
 .weatherapp {
   background-image: linear-gradient(135deg, #f5f7fa 0%, #8cb5f2 100%);
   margin: 0px auto;
@@ -32,7 +31,6 @@ footer {
 .currenttemp {
   font-size: 34px;
   font-weight: bold;
-  padding-bottom: 15px;
 }
 .degrees {
   font-size: 18px;
@@ -46,20 +44,24 @@ footer {
 .current-time {
   text-align: center;
 }
-.currenthighlow {
-  padding-bottom: 10px;
-  font-size: 30px;
+.weatherWrapper {
+  padding-bottom: 25px;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 50px;
+  margin-left: 30px auto;
 }
 .card {
   background: #ffffff 0%;
   border-radius: 15px;
   border: solid 1px #3b697885;
   box-shadow: rgba(37, 39, 89, 0.164) 0px 8px 8px 0;
-  max-width: 300px;
   display: block;
   align-self: center;
 }
-
+.card.body {
+  max-width: 100%;
+}
 .card-img-top {
   max-width: 100px;
   align-self: center;
@@ -69,7 +71,6 @@ footer {
 }
 .img-fluid {
   max-width: 60%;
-
   float: left;
   padding-left: 15px;
   display: inline-flex;
@@ -83,6 +84,7 @@ footer {
 .icon {
   vertical-align: middle;
   text-align: center;
+  display: inline-block;
 }
 .currenttemp .active {
   color: #204051;
